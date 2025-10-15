@@ -5,6 +5,7 @@
 
 # --- Administrator Check & Elevation ---
 # Check if the current session has admin rights.
+
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     # If not, display a message and re-launch the script as an Administrator.
     Write-Warning "Administrator privileges are required for system optimization."
