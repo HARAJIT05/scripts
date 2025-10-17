@@ -20,12 +20,13 @@ if (Get-Command scoop -ErrorAction SilentlyContinue) {
 # Add the 'extras' bucket for more apps
 Write-Host "  - Adding the Scoop 'extras' bucket..."
 scoop bucket add extras | Out-Null
+scoop bucket add games | Out-Null
 
 
 # --- [ Section 2: Application Installation ] ---
 Write-Host "`n[2/3] Installing all requested applications via Scoop..." -ForegroundColor Cyan
 # List of apps to install
-$apps = "git", "python", "vscode", "vlc", "brave", "translucenttb", "powertoys"
+$apps = "git", "python", "vscode", "vlc", "brave", "translucenttb", "powertoys", "heroic-games-launcher", "tinynvidiaupdatechecker"
 
 try {
     scoop install $apps
